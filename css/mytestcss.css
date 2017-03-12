@@ -1,0 +1,4 @@
+body{color: green;padding: 200px;}
+div#background{background-image: url(css.png);
+			   background-repeat: repeat-y;
+			   background-position: center;}

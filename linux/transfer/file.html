@@ -1,0 +1,47 @@
+<meta http-equiv="Content-Type" content="text/html" charset=UTF-8>
+<html>
+  <div style = "font:30px bolder '微软雅黑'; text-align:center;">
+    <b><p1>在windows和linux之间传送文件</p1></b>
+  </div>
+
+  <br/>
+  <br/>
+
+  <div style = "font:22px bolder '微软雅黑'; margin-left:20px">
+    方法一：使用SCP
+  </div>
+  <br/>
+
+  <div style = "font:17px bolder '宋体'; margin-left:30px">
+    &nbsp;&nbsp;1. 输入目标地址的ip和端口号即可实现连接。
+    <br/>
+    <br/>
+    &nbsp;&nbsp;2. 直接可以在windows和linux之间互传文件。
+  </div>
+  <br/><br/>
+  <div style = "font:22px bolder '微软雅黑'; margin-left:20px">
+    方法二：使用SSH
+
+  </div>
+  <br/>
+
+  <div style = "font:17px bolder '宋体'; margin-left:30px">
+  1. 在使用Putty前要确保Linux的ssh service是出于启动状态，可使用service ssh  status去查看是否有启动，如果ssh并未安装，可以用如下命令进行安装(示例为Ubuntu)
+  <br/><br/>
+    &nbsp;&nbsp;启动ssh服务：sudo /etc/init.d/ssh start <br/><br/>
+
+&nbsp;&nbsp;可以用 ps -e | grep ssh来查看ssh服务是否打开<br/><br/>
+
+&nbsp;&nbsp;stack@TEST:/etc/init.d$ ps -e | grep ssh<br/><br/>
+&nbsp;&nbsp;1378 ?        00:00:00 sshd<br/><br/>
+&nbsp;&nbsp;31015 ?        00:00:00 sshd<br/><br/>
+&nbsp;&nbsp;31066 ?        00:00:00 sshd<br/><br/>
+
+2. 使用Putty 登陆到Linux系统中：输入IP, 端口号为22， 使用SSH, 在弹出的cmd中输入用户名和密码登陆.<br /><br />
+3. 下载pscp.exe(<a href = "http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">点我下载</a>)放到c:\windows\system32目录下;<br/><br />
+4. 打开CMD，运行命令：pscp source_path username@hostIP:target_path，如pscp C:\Users\name\Desktop\gengui.png pp@192.168.191.25:/home/pi/Desktop 即可从windows向linux发送文件。<br/><br />
+&nbsp;&nbsp;<image src = "images/1.png" alt="传送示例" />
+
+  </div>
+  
+</html>

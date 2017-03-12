@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<meta http-equiv="Content-Type" content="text/html"; charset=UTF-8>
+
+<html>
+
+
+
+<div style = "font:27px bolder '微软雅黑';text-align:center">如何设置vim配色方案</div>
+<br /><br />
+
+<div style = "font:20px bolder '楷体'; margin-left:20px">
+ 1. 输入sudo su，以root权限登录
+</div>
+<br /><br />
+
+<div style = "font:20px bolder '楷体';margin-left:20px">
+2. 备份vimrc: cp /etc/vim/vimrc /etc/vim/vimrc.bak
+</div>
+<br /><br />
+
+<div style = "font:20px bolder '楷体';margin-left:20px">
+3. 编辑vimrc文件：vim /etc/vim/vimrc 
+</div>
+<br /><br />
+
+<div style = "font:20px bolder '楷体';margin-left:20px">
+4. 在最后加入下列代码：
+</div>
+<br />
+<div style = "font:16px bolder '楷体';margin-left:25px">
+set fenc=utf-8 "设定默认解码为UTF8 <br />
+set nocompatible "不要使用vi的键盘模式,而是vim自己的  <br />
+set t_Co=256 "设置vim显示颜色为256色 <br />
+set smarttab "在行和段开始处使用制表符  <br />
+set tabstop=4 "制表符统一为4 <br />
+set softtabstop=4 <br />
+set shiftwidth=4 <br />
+set autoindent "自动缩进  <br />
+set number "显示行号 <br />
+set so=10 "当光标离窗口上下边界的最小行距为10时自动滚动  <br />
+set nowrap "不换行 <br />
+set history=100 "保存100行历史命令行  <br />
+set viminfo+=! "保存全局变量 <br />
+set nobackup "不备份文件  <br />
+set linespace=0 "字符间插入的像素行数为0 <br />
+set ruler "在状态行上显示光标所在位置的行号和列号 <br /> 
+set cmdheight=2 "命令行的高度为2 <br />
+set showmatch "高亮显示匹配的括号  <br />
+set ignorecase "搜索时忽略大小写 <br />
+syntax on "语法高亮  <br />
+filetype on "侦测文件类型 <br />
+filetype plugin on"载入文件类型插件<br />
+</div>
+<br /><br />
+<a href = "http://liuhonghe.me/debian-set-vim-color.html">参考网址</a>
+
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<html>
+<head>
+	<title>44</title>
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+		var x = 1;
+		var x = "wd";
+		document.write("<br />"+ x + "<br />");
+
+		var a = 3;
+		var b = 4;
+		var c = cheng(a,b);
+		document.write(c + "<br />");
+
+
+	
+
+		function cheng(a,b){
+			c = a*b;
+			return c;
+		}
+
+		function firstfunction(){
+			x=document.getElementById('head1');
+			x.innerHTML="这是被替换的头";
+		}
+
+
+		function func1(){
+	
+			var txt = "";
+			var car = new Array();
+			car[0] = "benz";
+			car[1] = "aodi";
+			car[2] = "dazhong";
+			for(var x = 0;x < car.length; x++){
+				txt = txt + car[x] + "<br />";
+			}
+			document.getElementById("head2").innerHTML = txt;
+		}
+
+		$(document).ready(function(){
+  			$("button#bigger").click(function(){
+    		$("div").animate(
+    			{
+      				left:'250px',
+      				height:'+=50px',
+      				width:'+=50px'
+    			},
+    			"slow"
+    		);
+  			}
+  			);
+		});
+		$(document).ready(function(){
+  			$("button#smaller").click(function(){
+    		$("div").animate(
+    			{
+      				left:'250px',
+      				height:'-=50px',
+      				width:'-=50px'
+    			},
+    			"slow"
+    		);
+  			}
+  			);
+		});
+	</script>
+</head>
+<body>
+<h1 id="head1">这是第一个头！</h1>
+
+<button type="button" onclick="alert('welcome here!')">欢迎</button>
+
+<button type="button" onclick="firstfunction()">第一个功能</button>
+
+<button type="button" onclick = "func1()">click here</button>
+<h1 id="head2"></h1>
+
+<button id="bigger">增大</button><button id="smaller">减小</button>
+<p>默认情况下，所有 HTML 元素的位置都是静态的，并且无法移动。如需对位置进行操作，记得首先把元素的 CSS position 属性设置为 relative、fixed 或 absolute。</p>
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;">
+</div>
+
+
+<!--关于动画：fade/show/toggle|fadeIn/fadeOut/fadeToggle/fadeTo|slideUp/slideDown/slideToggle
+$("button").click(function(){
+	$("#w3s").attr({
+		"href":"http://www.baidu.com",
+		"title":"myhome"
+	});
+});
+$(document).ready(function(){
+	$("$but1").click(function(){
+		$("p").append("he");
+	})
+})
+	
+}
+xmlhttp.open();
+xmlhttp.open("POST","text1.txt",true);
+xmlhttp.send();
+if(xmlhttp.readystate = 4 && xmlhttp.status = 200){
+	document.getElemetById("myid").innerHTML = xmlhttp.responseText;
+}
+if(str.length == 0){
+	document.getElemetById("mydiv").innerHTML = "";
+	return;
+}
+xmlhttp.onreadystatechange = function(){
+	if(xmlhttp.readystate ==4 && xmlhttp.status == 200){
+		document.getElementById("mydiv").innerHTML = xmlhttp.responseText;
+	}
+}
+xmlhttp.onreadystatechange = function(){
+	if(xmlhttp.readystate == 4 && xmlhttp.status ==200){
+		document.getElementById("myid").innerHTML = xmlhttp.responseText;
+	}
+}
+if(strtolower($q) == strtolower($a[i],0,strlen($q)))
+{
+	if($hint == "")
+	{
+		$hint = $a[$i];
+	}
+	else
+	{
+		$hint = $hint. ",".$a["i"];
+	}
+
+}
+
+if($hint =="")
+{
+	$response = "no suggetion";
+}
+else
+{
+	$response = $hint;
+}
+
+echo "response";			
+
+
+-->
+
+
+
+
+
+</body>
+</html>

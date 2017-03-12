@@ -1,0 +1,31 @@
+<meta http-equiv="Content-Type" content="text/html"; charset = UTF-8>
+
+<html>
+  <p>Debian_setup:</p>
+  <br/>
+  <a href = "http://blog.csdn.net/cherylnatsu/article/details/6095001">参考网址</a>
+  <pre>
+  
+    VIM是GNU/Linux下最基本的编辑工具，在Windows和Fedora下使用的时候都对它进行基本的加色和标尺设定，Debian默认也有VIM，但是默认安装的是Compact版，有很多好用的功能被屏蔽。启用那些高级功能需要安装完整版的VIM。
+
+    
+
+	apt-get install vim
+ 
+	大约占用20多M，然后编辑 vimrc(在/etc/vim目录下)
+ 
+	set nocp
+	set ru
+	set nu
+	syntax on
+	set sw=2
+	set ts=2
+	set nocp:禁止使用VI兼容模式
+	set ru:显示标尺
+	set nu:显示行号
+	syntax on:语法高亮
+	set sw=2:自动缩进2字符(为了和emacs默认的值对应)
+	set ts=2:tab宽度2字符(同上)
+	保存后退出，熟悉而强大的VIM就回来了。
+  </pre>
+</html>
